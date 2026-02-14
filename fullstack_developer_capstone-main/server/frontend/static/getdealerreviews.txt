@@ -1,0 +1,15 @@
+# cURL request
+curl -X GET "http://127.0.0.1:8000/api/dealers/42/reviews/" \
+     -H "Accept: application/json"
+
+# Output
+[
+  {
+    "id": 101,
+    "dealer_id": 42,
+    "user": "jane.doe",
+    "rating": 5,
+    "review": "Sehr freundlicher Service und schnelle Abwicklung.",
+    "created_at": "2026-02-14T08:25:03Z"
+  }
+]
