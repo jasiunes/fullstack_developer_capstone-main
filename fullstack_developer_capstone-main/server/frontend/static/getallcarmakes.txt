@@ -1,23 +1,72 @@
-# cURL request
-curl -X GET "http://127.0.0.1:8000/api/carmakes/" \
-     -H "Accept: application/json"
-     -H "Authorization: Bearer <JWT_TOKEN>"
-# Output
-[
-  {
-    "make": "Toyota",
-    "models": ["Corolla", "Camry", "RAV4", "Yaris"]
-  },
-  {
-    "make": "Honda",
-    "models": ["Civic", "Accord", "CR-V", "Fit"]
-  },
-  {
-    "make": "Ford",
-    "models": ["Focus", "Mustang", "F-150", "Explorer"]
-  },
-  {
-    "make": "BMW",
-    "models": ["3 Series", "5 Series", "X3", "X5"]
-  }
-]
+ GET cURL komutu (örnek, base URL ve gerekirse auth bilgilerini uyarlayın)
+curl -sS -X GET \
+  "https://{BASE_URL}/fetchCarMakesModels" \
+  -H "Accept: application/json"
+
+# Örnek çıktı (GEÇERLİ JSON, tam ve doğru yapı: marka ve modeller)
+{
+  "dataSource": "fetchCarMakesModels",
+  "count": 6,
+  "items": [
+    {
+      "make": "Toyota",
+      "models": [
+        "Camry",
+        "Corolla",
+        "RAV4",
+        "Prius",
+        "Highlander"
+      ]
+    },
+    {
+      "make": "Honda",
+      "models": [
+        "Civic",
+        "Accord",
+        "CR-V",
+        "Fit",
+        "Pilot"
+      ]
+    },
+    {
+      "make": "Ford",
+      "models": [
+        "F-150",
+        "Mustang",
+        "Escape",
+        "Explorer",
+        "Fusion"
+      ]
+    },
+    {
+      "make": "Chevrolet",
+      "models": [
+        "Silverado",
+        "Malibu",
+        "Equinox",
+        "Tahoe",
+        "Camaro"
+      ]
+    },
+    {
+      "make": "BMW",
+      "models": [
+        "3 Series",
+        "5 Series",
+        "X3",
+        "X5",
+        "i4"
+      ]
+    },
+    {
+      "make": "Mercedes-Benz",
+      "models": [
+        "C-Class",
+        "E-Class",
+        "GLC",
+        "GLE",
+        "A-Class"
+      ]
+    }
+  ]
+}
