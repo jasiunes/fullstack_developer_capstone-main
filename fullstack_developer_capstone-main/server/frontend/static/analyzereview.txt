@@ -1,11 +1,16 @@
-# cURL request
-curl -X POST "http://127.0.0.1:8000/api/sentiment/" \
-     -H "Content-Type: application/json" \
-     -H "Authorization: Bearer <JWT_TOKEN>"
-     -d '{"review": "Fantastic services"}'
-# Output
+# GET cURL komutu (örnek base URL ile, kendinize göre uyarlayın)
+curl -sS -X GET \
+  "https://{BASE_URL}/analyze/Fantastic%20services" \
+  -H "Accept: application/json"
+
+# Örnek sentiment analysis çıktısı (geçerli JSON)
 {
-  "review": "Fantastic services",
+  "input": "Fantastic services",
   "sentiment": "positive",
-  "confidence": 0.96
+  "confidence": 0.97,
+  "details": {
+    "polarityScore": 0.92,
+    "subjectivityScore": 0.61,
+    "magnitude": 0.88
+  }
 }
