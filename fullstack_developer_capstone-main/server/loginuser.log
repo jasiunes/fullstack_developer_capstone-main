@@ -1,5 +1,14 @@
 # cURL request
-curl -X POST http://127.0.0.1:8000/api/login/ \
+curl -X POST "http://127.0.0.1:8000/djangoapp/login" \
      -H "Content-Type: application/json" \
-     -d '{"username": "testuser", "password": "testpassword"}'
-{"message": "Login successful", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}
+     -d '{"userName":"testuser","password":"testpassword"}'
+{
+  "status": "success",
+  "message": "Login successful",
+  "user": {
+    "userName": "testuser",
+    "firstName": "Yasemin",
+    "lastName": "Üneş"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sample.token.value"
+}
