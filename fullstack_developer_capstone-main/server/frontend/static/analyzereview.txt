@@ -1,0 +1,11 @@
+# cURL request
+curl -X POST "http://127.0.0.1:8000/api/sentiment/" \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer <JWT_TOKEN>"
+     -d '{"review": "Fantastic services"}'
+# Output
+{
+  "review": "Fantastic services",
+  "sentiment": "positive",
+  "confidence": 0.96
+}
