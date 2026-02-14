@@ -1,68 +1,62 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <title>About Us</title>
+
+    <!-- Required CSS -->
+    /static/bootstrap.min.css
+    /static/style.css
+
+    <style>
+        .team-member {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .team-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+<body>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+<div class="container mt-5">
+    <h1 class="text-center">Our Team</h1>
+    <p class="text-center">We are a dedicated team working on the Fullstack Developer Capstone project.</p>
+
+    <div class="row mt-4">
+
+        <!-- Member 1 -->
+        <div class="col-md-4 team-member">
+            /static/images/yasemin.jpg
+            <h4>Yasemin Sun</h4>
+            <p>Full Stack Developer</p>
+            mailto:yasemin@team.comyasemin@team.com</a>
         </div>
-      </div>
+
+        <!-- Member 2 -->
+        <div class="col-md-4 team-member">
+            /static/images/ahmet.jpg
+            <h4>Ahmet Kaya</h4>
+            <p>Backend Lead</p>
+            mailto:ahmet@team.comahmet@team.com</a>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="col-md-4 team-member">
+            /static/images/elif.jpg
+            <h4>Elif Yılmaz</h4>
+            <p>UI/UX Designer</p>
+            mailto:elif@team.comelif@team.com</a>
+        </div>
+
     </div>
-    </div>
-    </div>
-    
 </div>
 
+</body>
 </html>
