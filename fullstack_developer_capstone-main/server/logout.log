@@ -1,0 +1,6 @@
+# cURL request
+curl -X POST http://127.0.0.1:8000/api/logout/ \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+
+# Output
+{"message": "Logout successful"}
