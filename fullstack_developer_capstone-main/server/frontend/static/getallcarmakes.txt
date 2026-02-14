@@ -1,0 +1,23 @@
+# cURL request
+curl -X GET "http://127.0.0.1:8000/api/carmakes/" \
+     -H "Accept: application/json"
+     -H "Authorization: Bearer <JWT_TOKEN>"
+# Output
+[
+  {
+    "make": "Toyota",
+    "models": ["Corolla", "Camry", "RAV4", "Yaris"]
+  },
+  {
+    "make": "Honda",
+    "models": ["Civic", "Accord", "CR-V", "Fit"]
+  },
+  {
+    "make": "Ford",
+    "models": ["Focus", "Mustang", "F-150", "Explorer"]
+  },
+  {
+    "make": "BMW",
+    "models": ["3 Series", "5 Series", "X3", "X5"]
+  }
+]
