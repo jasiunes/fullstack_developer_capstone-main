@@ -1,0 +1,24 @@
+# cURL request
+curl -X GET "http://127.0.0.1:8000/api/dealers/" \
+     -H "Accept: application/json"
+# Output
+[
+  {
+    "id": 1,
+    "name": "Autohaus Müller",
+    "city": "Berlin",
+    "state": "BE"
+  },
+  {
+    "id": 2,
+    "name": "Premium Cars Stuttgart",
+    "city": "Stuttgart",
+    "state": "BW"
+  },
+  {
+    "id": 3,
+    "name": "Hamburg Motors",
+    "city": "Hamburg",
+    "state": "HH"
+  }
+]
