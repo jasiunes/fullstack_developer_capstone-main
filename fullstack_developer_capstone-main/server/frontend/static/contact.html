@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+
+  <!-- GÖREVİN İSTEDİĞİ GİBİ /static üzerinden stylesheet linkleri -->
+  <link rel="stylesheet" href="/static/bootstrap.min.css" />
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <!-- Django kullanıyorsanız ve static tag tercih ediyorsanız (opsiyonel):
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Ekstra küçük dokunuşlar (görev dışı, opsiyonel) */
+    .navbar-brand { font-weight: 700; }
+    .hero { background: #f8fafc; border-radius: 12px; padding: 24px; }
+    .contact-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; }
+    .contact-icon { width: 28px; height: 28px; margin-right: 8px; }
+    .active { font-weight: 700 !important; }
+    footer { color: #6b7280; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (Contact Us aktif) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="/">Fullstack Capstone</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNavbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <!-- örnek: Home -->
+            <a class="nav-link" href="/Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <!-- örnek: About -->
+            <a class="nav-link" href="/About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <!-- Contact aktif -->
+            <a class="nav-link active" aria-current="page" href="/Contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BAŞLIK / HERO -->
+  <main class="container my-5">
+    <section class="hero mb-4">
+      <h1 class="mb-2">Contact Us</h1>
+      <p class="text-muted mb-0">
+        Sorularınız, geri bildirimleriniz veya iş birliği talepleriniz için bizimle iletişime geçin.
+      </p>
+    </section>
+
+    <div class="row g-4">
+      <!-- İLETİŞİM BİLGİLERİ -->
+      <div class="col-12 col-lg-6">
+        <div class="contact-card h-100">
+          <h2 class="h4 mb-3">Get in Touch</h2>
+
+          <div class="d-flex align-items-start mb-3">
+            <img class="contact-icon" src="/static/icons/location.svg" alt="Address icon" />
+            <div>
+              <div class="fw-semibold">Address</div>
+              <div>Capstone HQ, 123 Innovation Street, 44135 Dortmund, Germany</div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start mb-3">
+            <img class="contact-icon" src="/static/icons/mail.svg" alt="Email icon" />
+            <div>
+              <div class="fw-semibold">Email</div>
+              <a href="mailto:contact@capstone-team.dev">contact@capstone-team.dev</a>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start mb-3">
+            <img class="contact-icon" src="/static/icons/phone.svg" alt="Phone icon" />
+            <div>
+              <div class="fw-semibold">Phone</div>
+              <a href="tel:+492312345678">+49 231 123 456 78</a>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start">
+            <img class="contact-icon" src="/static/icons/time.svg" alt="Hours icon" />
+            <div>
+              <div class="fw-semibold">Hours</div>
+              <div>Mon–Fri: 09:00–17:00 (CET)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- İLETİŞİM FORMU (statik örnek) -->
+      <div class="col-12 col-lg-6">
+        <div class="contact-card h-100">
+          <h2 class="h4 mb-3">Send a Message</h2>
+          <form action="#" method="post" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="jane.doe@example.com" required />
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Regarding your services" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPSİYONEL: HARİTA / AÇIKLAMASI -->
+    <section class="mt-4">
+      <div class="contact-card">
+        <h2 class="h5 mb-3">Find Us</h2>
+        <p class="mb-3">Dortmund şehir merkezinde, U-Bahn istasyonuna yürüme mesafesindeyiz.</p>
+        <!-- Gerçek bir embed harita koyacaksanız: Google Maps iframe vb. -->
+        <div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
+          <span class="text-muted">Map placeholder</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container my-5 text-center">
+    <hr />
+    <p class="mb-0">© <span id="year"></span> Fullstack Developer Capstone Team</p>
+  </footer>
+
+  <!-- Bootstrap JS (opsiyonel; navbar toggler için gerekli olabilir) -->
+  <script src="/static/bootstrap.bundle.min.js"></script>
+  <!-- Django static ile kullanacaksanız (opsiyonel):
+  <script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+  -->
+  <script>
+    // Küçük kalite dokunuşu: Yılı otomatik göster
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
