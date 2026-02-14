@@ -1,19 +1,39 @@
-# cURL request
-curl -X GET "http://127.0.0.1:8000/api/dealers/?state=KS" \
-     -H "Accept: application/json"
-     -H "Authorization: Bearer <JWT_TOKEN>"
-# Output
+curl -sS -X GET \
+  "https://{BASE_URL}/fetchDealers/Kansas" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer {API_TOKEN}"
 [
   {
-    "id": 14,
-    "name": "Kansas City Auto Center",
-    "city": "Kansas City",
+    "id": "KS-00123",
+    "city": "Wichita",
     "state": "KS",
-    "address": "100 Main Street",
-    "zip": "66101"
+    "address": "1234 E Douglas Ave",
+    "zipCode": "67202",
+    "latitude": 37.686981,
+    "longitude": -97.335579,
+    "shortName": "Wichita Auto",
+    "fullName": "Wichita Automotive Group, LLC"
   },
   {
-    "id": 22,
-    "name": "Wichita Premium Motors",
-    "city": "Wichita",
-   
+    "id": "KS-00456",
+    "city": "Overland Park",
+    "state": "KS",
+    "address": "8900 Metcalf Ave",
+    "zipCode": "66212",
+    "latitude": 38.978590,
+    "longitude": -94.671286,
+    "shortName": "OP Motors",
+    "fullName": "Overland Park Motors Inc."
+  },
+  {
+    "id": "KS-00789",
+    "city": "Topeka",
+    "state": "KS",
+    "address": "200 S Kansas Ave",
+    "zipCode": "66603",
+    "latitude": 39.048330,
+    "longitude": -95.677560,
+    "shortName": "Topeka Cars",
+    "fullName": "Topeka Cars & Trucks Co."
+  }
+]
