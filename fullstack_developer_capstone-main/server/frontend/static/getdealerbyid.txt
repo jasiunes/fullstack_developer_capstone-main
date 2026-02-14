@@ -1,14 +1,16 @@
--H "Authorization: Bearer <JWT_TOKEN>"
 # cURL request
-curl -X GET "http://127.0.0.1:8000/api/dealers/42/" \
+curl -X GET "http://127.0.0.1:8000/fetchDealer/15" \
      -H "Accept: application/json"
 # Output
 {
-  "id": 42,
-  "name": "Autohaus Premium Berlin",
-  "city": "Berlin",
-  "state": "BE",
-  "address": "Kurfürstendamm 123",
-  "zip": "10719",
-  "phone": "+49 30 1234567"
+  "id": 15,
+  "city": "Kansas City",
+  "state": "KS",
+  "st": "KS",
+  "address": "500 Main Street",
+  "zip": "66101",
+  "lat": 39.1141,
+  "long": -94.6275,
+  "short_name": "KC Auto Center",
+  "full_name": "Kansas City Auto Center"
 }
