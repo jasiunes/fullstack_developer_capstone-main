@@ -1,24 +1,56 @@
 # cURL request
-curl -X GET "http://127.0.0.1:8000/api/dealers/" \
+curl -X GET "http://127.0.0.1:8000/fetchDealers" \
      -H "Accept: application/json"
-# Output
 [
   {
     "id": 1,
-    "name": "Autohaus Müller",
-    "city": "Berlin",
-    "state": "BE"
+    "city": "New York",
+    "state": "NY",
+    "st": "NY",
+    "address": "123 Manhattan Blvd",
+    "zip": "10001",
+    "lat": 40.7128,
+    "long": -74.0060,
+    "short_name": "NYC Motors",
+    "full_name": "New York City Motors"
   },
   {
     "id": 2,
-    "name": "Premium Cars Stuttgart",
-    "city": "Stuttgart",
-    "state": "BW"
+    "city": "Los Angeles",
+    "state": "CA",
+    "st": "CA",
+    "address": "456 Sunset Street",
+    "zip": "90001",
+    "lat": 34.0522,
+    "long": -118.2437,
+    "short_name": "LA Auto",
+    "full_name": "Los Angeles Auto Group"
   },
   {
     "id": 3,
-    "name": "Hamburg Motors",
-    "city": "Hamburg",
-    "state": "HH"
+    "city": "Chicago",
+    "state": "IL",
+    "st": "IL",
+    "address": "789 Lakeshore Ave",
+    "zip": "60007",
+    "lat": 41.8781,
+    "long": -87.6298,
+    "short_name": "Chicago Cars",
+    "full_name": "Chicago Car Dealership"
+  },
+
+  /* … toplam 50 dealership örneği … */
+
+  {
+    "id": 50,
+    "city": "Miami",
+    "state": "FL",
+    "st": "FL",
+    "address": "900 Beach Drive",
+    "zip": "33101",
+    "lat": 25.7617,
+    "long": -80.1918,
+    "short_name": "Miami Wheels",
+    "full_name": "Miami Luxury Wheels"
   }
 ]
