@@ -1,0 +1,19 @@
+# cURL request
+curl -X GET "http://127.0.0.1:8000/api/dealers/?state=KS" \
+     -H "Accept: application/json"
+     -H "Authorization: Bearer <JWT_TOKEN>"
+# Output
+[
+  {
+    "id": 14,
+    "name": "Kansas City Auto Center",
+    "city": "Kansas City",
+    "state": "KS",
+    "address": "100 Main Street",
+    "zip": "66101"
+  },
+  {
+    "id": 22,
+    "name": "Wichita Premium Motors",
+    "city": "Wichita",
+   
